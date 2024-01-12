@@ -1,16 +1,14 @@
-import { useContext, useEffect } from "react"
 import { useRoutes } from "react-router-dom"
 
 import routes from "./routes"
-import LoadingContext from "./contexts/Loading"
 import Header from "./components/Header"
 import RenderLoading from "./components/RenderLoading"
+import useAppLoading from "./hooks/useApploading"
 
 const App = () => {
   const router = useRoutes(routes)
-  const loading = useContext(LoadingContext)
 
-  useEffect(() => {
+  useAppLoading((cl) => {
     fetch("https://fakestoreapi.com/products")
       .then(() => {
         // codes...
@@ -18,8 +16,8 @@ const App = () => {
       .catch(() => {
         // codes...
       })
-      .finally(() => loading.removeKey())
-  }, [])
+      .finally(() => cl())
+  })
 
   return (
     <>
