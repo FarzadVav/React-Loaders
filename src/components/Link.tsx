@@ -1,7 +1,7 @@
 import { ReactNode, useContext } from "react"
 import { useNavigate } from "react-router-dom"
 
-import Loading from "../contexts/Loading"
+import LoadingContext from "../contexts/Loading"
 
 type LinkProps = {
   className?: string
@@ -22,7 +22,7 @@ const Link = ({
   clickHandler = () => {},
   children,
 }: LinkProps) => {
-  const loading = useContext(Loading)
+  const loading = useContext(LoadingContext)
   const navigate = useNavigate()
 
   const _clickHandler = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {

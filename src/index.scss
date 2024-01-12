@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-slate-950 min-h-screen;
+    @apply bg-slate-950 text-slate-100 min-h-screen;
   }
 
   #root {
@@ -14,7 +14,7 @@
 
 @layer components {
   .link {
-    @apply text-white h-12 leading-6 flex justify-center items-center px-6 rounded cursor-pointer;
+    @apply h-12 leading-6 flex justify-center items-center px-6 rounded cursor-pointer;
   }
 
   .active-link {

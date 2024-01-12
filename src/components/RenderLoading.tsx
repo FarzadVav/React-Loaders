@@ -1,6 +1,6 @@
 import { ReactNode, useContext, useEffect, useState } from "react"
 
-import Loading from "../contexts/Loading"
+import LoadingContext from "../contexts/Loading"
 
 type RenderLoadingProps = {
   keys?: string[]
@@ -10,7 +10,7 @@ type RenderLoadingProps = {
 }
 
 const RenderLoading = (props: RenderLoadingProps) => {
-  const loading = useContext(Loading)
+  const loading = useContext(LoadingContext)
   const [loaders, setLoaders] = useState<{ page: boolean; action: boolean }>({
     page: false,
     action: false,

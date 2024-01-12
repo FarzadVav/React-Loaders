@@ -2,7 +2,7 @@ import { ReactNode, useContext, useState, useEffect } from "react"
 import { PulseLoader } from "react-spinners"
 import { v4 as uuid } from "uuid"
 
-import Loading from "../contexts/Loading"
+import LoadingContext from "../contexts/Loading"
 import RenderLoading from "./RenderLoading"
 
 type ButtonProps = {
@@ -15,7 +15,7 @@ type ButtonProps = {
 }
 
 const Button = ({ className, clickHandler, children }: ButtonProps) => {
-  const loading = useContext(Loading)
+  const loading = useContext(LoadingContext)
   const [key, setKey] = useState<string>("")
 
   useEffect(() => {
