@@ -12,6 +12,7 @@
   }
 }
 
+// Components
 @layer components {
   .link {
     @apply h-12 leading-6 flex justify-center items-center px-6 rounded cursor-pointer;
@@ -20,5 +21,38 @@
   .active-link {
     @extend .link;
     @apply bg-slate-950;
+  }
+}
+
+// Animations
+@layer components {
+  .loading {
+    background: #fff;
+    width: 100%;
+    height: 2px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 1;
+    transition: 300ms linear;
+  }
+
+  .loading-on {
+    animation: loading-on 10s 1 linear forwards;
+  }
+
+  @keyframes loading-on {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  .loading-off {
+    opacity: 0;
   }
 }
