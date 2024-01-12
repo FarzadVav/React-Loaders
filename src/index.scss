@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-slate-950 min-h-screen;
+}
+
+#root {
+  @apply max-h-full max-w-full;
+}
