@@ -22,6 +22,18 @@
     @extend .link;
     @apply bg-slate-950;
   }
+
+  .wrapper {
+    @apply w-full flex flex-col justify-center items-center py-12 px-6;
+
+    h1 {
+      @apply text-3xl;
+    }
+
+    p {
+      @apply text-center mt-6;
+    }
+  }
 }
 
 // Animations
