@@ -2,10 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-slate-950 min-h-screen;
+@layer base {
+  body {
+    @apply bg-slate-950 min-h-screen;
+  }
+
+  #root {
+    @apply max-h-full max-w-full;
+  }
 }
 
-#root {
-  @apply max-h-full max-w-full;
+@layer components {
+  .link {
+    @apply text-white h-12 leading-6 flex justify-center items-center px-6 rounded cursor-pointer;
+  }
+
+  .active-link {
+    @extend .link;
+    @apply bg-slate-950;
+  }
 }

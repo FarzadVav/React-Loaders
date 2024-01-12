@@ -5,12 +5,14 @@ const ExamPage = lazy(() => import("./pages/ExamPage.tsx"))
 const Actions = lazy(() => import("./pages/Actions.tsx"))
 
 type routeTypes = {
+  name: string
   path: string
   element: ReactNode
 }[]
 
 const routes: routeTypes = [
   {
+    name: "Home",
     path: "/",
     element: (
       <Suspense>
@@ -19,6 +21,7 @@ const routes: routeTypes = [
     ),
   },
   {
+    name: "Example",
     path: "/example",
     element: (
       <Suspense>
@@ -27,6 +30,7 @@ const routes: routeTypes = [
     ),
   },
   {
+    name: "Actions",
     path: "/actions",
     element: (
       <Suspense>
