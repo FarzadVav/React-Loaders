@@ -9,6 +9,7 @@ const PageLoading = ({ children }: PropsWithChildren) => {
   const location = useLocation()
 
   useEffect(() => {
+    // This setTimeout is just for loading feel
     setTimeout(() => {
       setIsLoading(false)
     }, 1000)
