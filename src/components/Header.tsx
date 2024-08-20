@@ -12,7 +12,7 @@ const Header = () => {
       {routes.map((route) => (
         <NavLink
           key={route.path}
-          className={(link) => (link.isActive ? "link-active" : "link")}
+          className={(link) => (link.isActive ? "active-link" : "link")}
           to={route.path}
           onClick={() => setLoading(true)}
         >

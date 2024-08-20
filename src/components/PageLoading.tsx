@@ -11,7 +11,7 @@ const PageLoading = ({ children }: PropsWithChildren) => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 2000)
+    }, 1000)
   }, [location.pathname])
 
   return (
