@@ -1,7 +1,7 @@
 import { lazy, ReactNode, Suspense } from "react"
 
 const Home = lazy(() => import("./pages/Home.tsx"))
-const ExamPage = lazy(() => import("./pages/ExamPage.tsx"))
+const Posts = lazy(() => import("./pages/Posts.tsx"))
 const Actions = lazy(() => import("./pages/Actions.tsx"))
 
 type routeTypes = {
@@ -21,11 +21,11 @@ const routes: routeTypes = [
     ),
   },
   {
-    name: "Example",
-    path: "/example",
+    name: "Posts",
+    path: "/posts",
     element: (
       <Suspense>
-        <ExamPage />
+        <Posts />
       </Suspense>
     ),
   },

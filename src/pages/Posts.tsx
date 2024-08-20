@@ -1,17 +1,4 @@
-import useLoadingEffect from "../hooks/useLoadingEffect"
-
 const ExamPage = () => {
-  useLoadingEffect((cl) => {
-    fetch("https://fakestoreapi.com/products")
-      .then(() => {
-        // codes...
-      })
-      .catch(() => {
-        // codes...
-      })
-      .finally(() => cl())
-  })
-
   return (
     <div className="wrapper">
       <h1>Example</h1>
