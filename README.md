@@ -1,6 +1,6 @@
 # React Loaders
 
-My goal in building this project was to manage loadings throughout the application. I created several `components`, custom `hooks` and `contexts` in this project to manage all page loadings and actions performed in forms and simply show dynamic loadings to the user.
+My goal in writing this project was to control the types of loading in a React application. In this project, I controlled the loading of the application, fetching data from the external API, and the actions that are performed in the buttons or forms and showed it to the user.
 
 ✌ I plan to convert this project into an npm package.
 
